@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@babylonjs/core':
+    specifier: ^6.35.0
+    version: 6.35.0
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -13,6 +16,10 @@ devDependencies:
     version: 5.0.10
 
 packages:
+
+  /@babylonjs/core@6.35.0:
+    resolution: {integrity: sha512-P4JhCltTCgH0wpHMNSIHHvpKZHsba/SMnsxAww45oWh8Fq7ub2N6DUOWH6CIUCdr+S5tAjZNPhgcCkUtmoE57A==}
+    dev: true
 
   /@esbuild/aix-ppc64@0.19.10:
     resolution: {integrity: sha512-Q+mk96KJ+FZ30h9fsJl+67IjNJm3x2eX+GBWGmocAKgzp27cowCOOqSdscX80s0SpdFXZnIv/+1xD1EctFx96Q==}

@@ -21,8 +21,10 @@
   },
   "devDependencies": {
     "@babylonjs/core": "^6.35.0",
+    "@types/node": "^20.10.5",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.6.4"
   }
 }

@@ -12,7 +12,7 @@ const main = async () => {
     return;
   }
 
-  const engine = new Engine(renderCanvas, true);
+  const engine = new Engine(renderCanvas);
   const scene = new Scene(engine);
 
   scene.createDefaultCameraOrLight(true, true, true);

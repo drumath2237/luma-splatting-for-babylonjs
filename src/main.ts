@@ -1,6 +1,6 @@
 import "./style.scss";
 
-import { Engine, MeshBuilder, Scene, Vector3 } from "@babylonjs/core";
+import { Engine, Scene } from "@babylonjs/core";
 
 import { LumaGaussianSplatting } from "../lib";
 
@@ -14,19 +14,18 @@ const main = async () => {
 
   const engine = new Engine(renderCanvas);
   const scene = new Scene(engine);
-
   scene.createDefaultCameraOrLight(true, true, true);
-
-  const box = MeshBuilder.CreateBox("box", { size: 0.1 });
-  box.position = new Vector3(0, 0.05, 0);
-
-  window.addEventListener("resize", () => engine.resize());
-  engine.runRenderLoop(() => scene.render());
 
   // 1. Create LumaGaussianSplatting Object.
   // 2. Load splat data with UUID and put the gaussian splatting into your scene.
+  const uuid = "389ddb1d-e926-49d5-b342-ee4ddbc9a22d";
   const lumaSplat = new LumaGaussianSplatting("luma splat", scene);
-  await lumaSplat.loadDataWithUuidAsync("ca9ea966-ca24-4ec1-ab0f-af665cb546ff");
+  await lumaSplat.loadDataWithUuidAsync(uuid);
+  lumaSplat.splat.mesh?.scaling.set(0.2, 0.2, 0.2);
+  lumaSplat.splat.mesh?.rotation.set(0, (3 * Math.PI) / 4, 0);
+
+  window.addEventListener("resize", () => engine.resize());
+  engine.runRenderLoop(() => scene.render());
 };
 
 main();

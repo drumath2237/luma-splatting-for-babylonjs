@@ -1,7 +1,19 @@
 {
   "name": "luma-splatting-for-babylonjs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0-beta.0",
+  "description": "LumaAI Web Library for Babylon.js",
+  "author": "drumath2237",
+  "license": "Apache-2.0",
+  "repository": {
+    "url": "https://github.com/drumath2237/luma-splatting-for-babylonjs"
+  },
+  "homepage": "https://github.com/drumath2237/luma-splatting-for-babylonjs",
+  "keywords": [
+    "LumaAI",
+    "Gaussian Splatting",
+    "Babylon.js"
+  ],
   "type": "module",
   "files": [
     "dist"

@@ -1,6 +1,6 @@
 import { GaussianSplatting, Scene } from "@babylonjs/core";
 
-interface ILumaGaussianSplatting {
+export interface ILumaGaussianSplatting {
   get splat(): GaussianSplatting;
 
   loadDataWithUuidAsync(uuid: string): Promise<void>;

@@ -17,11 +17,11 @@ const main = async () => {
   scene.createDefaultCameraOrLight(true, true, true);
 
   // 1. Create LumaGaussianSplatting Object.
-  // 2. Load splat data with UUID and put the gaussian splatting into your scene.
-  const uuid = "389ddb1d-e926-49d5-b342-ee4ddbc9a22d";
+  // 2. Load splat data with UUID
+  //    and put the gaussian splatting into your scene.
   const lumaSplat = new LumaGaussianSplatting("luma splat", scene);
-  await lumaSplat.loadDataWithUuidAsync(uuid);
-  lumaSplat.splat.mesh?.scaling.set(0.2, 0.2, 0.2);
+  await lumaSplat.loadDataWithUuidAsync("389ddb1d-e926-49d5-b342-ee4ddbc9a22d");
+
   lumaSplat.splat.mesh?.rotation.set(0, (3 * Math.PI) / 4, 0);
 
   window.addEventListener("resize", () => engine.resize());

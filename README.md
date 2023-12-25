@@ -1,1 +1,54 @@
-# luma-splatting-for-babylonjs
+# Luma Splatting for Babylon.js
+
+![screen shot](./docs/ss.png)
+
+## About
+
+A library to load LumaAI Gaussian Splatting into Babylon.js, like the [Luma Web Library](https://lumalabs.ai/luma-web-library).
+
+## Environment
+
+- Babylon.js 6.35.0
+- Node.js 18,20
+
+## Install & Usage
+
+For npm
+
+```bash
+# install deps for npm
+npm install -D @babylonjs/core luma-splatting-for-babylonjs
+
+# or for yarn
+yarn add -D @babylonjs/core luma-splatting-for-babylonjs
+
+# or for pnpm
+pnpm add -D @babylonjs/core luma-splatting-for-babylonjs
+```
+
+You can load and put the gaussian splatting data with code like below.
+
+```ts
+import { Engine, Scene } from "@babylonjs/core";
+import { LumaGaussianSplatting } from "luma-splatting-for-babylonjs";
+
+// ...
+
+const engine = new Engine(renderCanvas);
+const scene = new Scene(engine);
+scene.createDefaultCameraOrLight(true, true, true);
+
+// 1. Create LumaGaussianSplatting Object.
+// 2. Load splat data with UUID
+//    and put the gaussian splatting into your scene.
+const uuid = "ca9ea966-ca24-4ec1-ab0f-af665cb546ff";
+const lumaSplat = new LumaGaussianSplatting("luma splat", scene);
+await lumaSplat.loadDataWithUuidAsync(uuid);
+
+window.addEventListener("resize", () => engine.resize());
+engine.runRenderLoop(() => scene.render());
+```
+
+## Author
+
+[@drumath2237](https://twitter.com/ninisan_drumath)

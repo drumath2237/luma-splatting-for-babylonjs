@@ -1,10 +1,12 @@
 # Luma Splatting for Babylon.js
 
-![screen shot](./docs/ss.png)
+https://github.com/drumath2237/luma-splatting-for-babylonjs/assets/11372210/271bfb8f-4a4f-4ce3-9660-676c1f7579e6
 
 ## About
 
 A library to load LumaAI Gaussian Splatting into Babylon.js, like the [Luma Web Library](https://lumalabs.ai/luma-web-library).
+
+![screen shot](./docs/ss.png)
 
 ## Environment
 

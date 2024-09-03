@@ -23,9 +23,12 @@ export const convertLumaPlyToSplatData = (
   if (headerEndIndex < 0 || !header) {
     return data;
   }
-  const vertexCount = Number.parseInt(
-    /element vertex (\d+)\n/.exec(header)![1],
-  );
+
+  const vertexCountStr = /element vertex (\d+)\n/.exec(header)?.[1];
+  if (!vertexCountStr) {
+    throw new Error("cannot parse vertex count from header!");
+  }
+  const vertexCount = Number.parseInt(vertexCountStr);
 
   let rowOffset = 0;
   const offsets: Record<string, number> = {
@@ -79,7 +82,7 @@ export const convertLumaPlyToSplatData = (
       propertyIndex++
     ) {
       const property = properties[propertyIndex];
-      let value;
+      let value: number;
       let remapFunc: (x: number, y: number) => number;
       switch (property.type) {
         // case "float":

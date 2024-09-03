@@ -1,1 +1,1 @@
-export * from "./LumaGausianSplatting";
+export * from "./LumaGaussianSplatting";

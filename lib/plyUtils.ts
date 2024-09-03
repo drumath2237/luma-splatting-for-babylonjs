@@ -16,8 +16,8 @@ export const convertLumaPlyToSplatData = (
   data: ArrayBufferLike,
   metadata: IGSPointCloudMeta,
 ): ArrayBuffer => {
-  const ubuf = new Uint8Array(data);
-  const header = new TextDecoder().decode(ubuf.slice(0, 1024 * 10));
+  const uint8Buffer = new Uint8Array(data);
+  const header = new TextDecoder().decode(uint8Buffer.slice(0, 1024 * 10));
   const headerEnd = "end_header\n";
   const headerEndIndex = header.indexOf(headerEnd);
   if (headerEndIndex < 0 || !header) {

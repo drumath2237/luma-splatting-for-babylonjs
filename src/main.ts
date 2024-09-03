@@ -6,7 +6,7 @@ import { LumaGaussianSplatting } from "../lib";
 
 const main = async () => {
   const renderCanvas = document.getElementById(
-    "renderCanvas"
+    "renderCanvas",
   ) as HTMLCanvasElement;
   if (!renderCanvas) {
     return;

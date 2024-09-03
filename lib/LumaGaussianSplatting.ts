@@ -1,5 +1,5 @@
-import { GaussianSplatting, Scene } from "@babylonjs/core";
-import { IGSPointCloudMeta, getSplatAndMetaDataUrlsAsync } from "./api";
+import { GaussianSplatting, type Scene } from "@babylonjs/core";
+import { type IGSPointCloudMeta, getSplatAndMetaDataUrlsAsync } from "./api";
 import { convertLumaPlyToSplatData } from "./plyUtils";
 
 export interface ILumaGaussianSplatting {
@@ -15,7 +15,10 @@ export class LumaGaussianSplatting implements ILumaGaussianSplatting {
     return this._splat;
   }
 
-  public constructor(private name: string, private scene: Scene) {
+  public constructor(
+    private name: string,
+    private scene: Scene,
+  ) {
     this._splat = new GaussianSplatting(name, scene);
   }
 
@@ -29,13 +32,13 @@ export class LumaGaussianSplatting implements ILumaGaussianSplatting {
     const [plyBinary, metaData] = await Promise.all([
       fetch(plyFilesUrl).then((res) => res.arrayBuffer()),
       fetch(metaFileUrl).then(
-        (res) => res.json() as Promise<IGSPointCloudMeta>
+        (res) => res.json() as Promise<IGSPointCloudMeta>,
       ),
     ]);
 
     const splatBinaryData = await convertLumaPlyToSplatData(
       plyBinary,
-      metaData
+      metaData,
     );
 
     this._splat = new GaussianSplatting(this.name, this.scene);

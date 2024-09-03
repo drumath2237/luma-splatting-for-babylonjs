@@ -1,43 +1,40 @@
 {
-  "name": "luma-splatting-for-babylonjs",
-  "private": false,
-  "version": "1.0.0-beta.0",
-  "description": "LumaAI Web Library for Babylon.js",
-  "author": "drumath2237",
-  "license": "Apache-2.0",
-  "repository": {
-    "url": "https://github.com/drumath2237/luma-splatting-for-babylonjs"
-  },
-  "homepage": "https://github.com/drumath2237/luma-splatting-for-babylonjs",
-  "keywords": [
-    "LumaAI",
-    "Gaussian Splatting",
-    "Babylon.js"
-  ],
-  "type": "module",
-  "files": [
-    "dist/"
-  ],
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.umd.cjs"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "prepare": "pnpm build"
-  },
-  "devDependencies": {
-    "@babylonjs/core": "^6.35.0",
-    "@biomejs/biome": "^1.8.3",
-    "@types/node": "^20.10.5",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vite-plugin-dts": "^3.6.4"
-  }
+	"name": "luma-splatting-for-babylonjs",
+	"private": false,
+	"version": "1.0.0-beta.0",
+	"description": "LumaAI Web Library for Babylon.js",
+	"author": "drumath2237",
+	"license": "Apache-2.0",
+	"repository": {
+		"url": "https://github.com/drumath2237/luma-splatting-for-babylonjs"
+	},
+	"homepage": "https://github.com/drumath2237/luma-splatting-for-babylonjs",
+	"keywords": ["LumaAI", "Gaussian Splatting", "Babylon.js"],
+	"type": "module",
+	"files": ["dist/"],
+	"main": "./dist/index.umd.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.umd.cjs"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"prepare": "pnpm build",
+		"check": "biome check",
+		"check:write": "biome check --write",
+		"check:ci": "biome ci"
+	},
+	"devDependencies": {
+		"@babylonjs/core": "^6.35.0",
+		"@biomejs/biome": "^1.8.3",
+		"@types/node": "^20.10.5",
+		"sass": "^1.69.5",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vite-plugin-dts": "^3.6.4"
+	}
 }

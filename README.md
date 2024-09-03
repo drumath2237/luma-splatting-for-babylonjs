@@ -10,7 +10,7 @@ A library to load LumaAI Gaussian Splatting into Babylon.js, like the [Luma Web 
 
 ## Environment
 
-- Babylon.js 6.35.0
+- Babylon.js 7.23.0
 - Node.js 18,20
 
 ## Install & Usage

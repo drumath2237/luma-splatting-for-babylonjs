@@ -1,5 +1,8 @@
 # Luma Splatting for Babylon.js
 
+![NPM Version](https://img.shields.io/npm/v/luma-splatting-for-babylonjs?logo=npm)
+![Static Badge](https://img.shields.io/badge/Babylon.js-v7.23.0-BB464B?logo=babylondotjs&logoColor=white)
+
 https://github.com/drumath2237/luma-splatting-for-babylonjs/assets/11372210/271bfb8f-4a4f-4ce3-9660-676c1f7579e6
 
 ## About

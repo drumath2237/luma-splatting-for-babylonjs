@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@babylonjs/core": "^6.35.0",
+    "@biomejs/biome": "^1.8.3",
     "@types/node": "^20.10.5",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",

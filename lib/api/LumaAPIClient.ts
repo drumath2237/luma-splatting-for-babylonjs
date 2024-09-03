@@ -1,7 +1,7 @@
-import { LumaSplattingResponseType, SplatDataUrlsType } from "./types";
+import type { LumaSplattingResponseType, SplatDataUrlsType } from "./types";
 
 export const getSplatAndMetaDataUrlsAsync = async (
-  uuid: string
+  uuid: string,
 ): Promise<SplatDataUrlsType | null> => {
   const lumaaiBaseEndpoint: string =
     "https://webapp.engineeringlumalabs.com/api/v3/captures";

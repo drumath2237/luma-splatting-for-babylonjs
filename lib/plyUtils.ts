@@ -1,5 +1,5 @@
 import { Quaternion } from "@babylonjs/core";
-import { IGSPointCloudMeta } from "./api/types";
+import type { IGSPointCloudMeta } from "./api/types";
 
 const remapValue =
   (x: number) =>
@@ -14,7 +14,7 @@ const remapValue =
  */
 export const convertLumaPlyToSplatData = (
   data: ArrayBufferLike,
-  metadata: IGSPointCloudMeta
+  metadata: IGSPointCloudMeta,
 ): ArrayBuffer => {
   const ubuf = new Uint8Array(data);
   const header = new TextDecoder().decode(ubuf.slice(0, 1024 * 10));
@@ -23,7 +23,9 @@ export const convertLumaPlyToSplatData = (
   if (headerEndIndex < 0 || !header) {
     return data;
   }
-  const vertexCount = parseInt(/element vertex (\d+)\n/.exec(header)![1]);
+  const vertexCount = Number.parseInt(
+    /element vertex (\d+)\n/.exec(header)![1],
+  );
 
   let rowOffset = 0;
   const offsets: Record<string, number> = {
@@ -66,10 +68,10 @@ export const convertLumaPlyToSplatData = (
     const rgba = new Uint8ClampedArray(buffer, i * rowLength + 24, 4);
     const rot = new Uint8ClampedArray(buffer, i * rowLength + 28, 4);
 
-    let r0: number = 255;
-    let r1: number = 0;
-    let r2: number = 0;
-    let r3: number = 0;
+    let r0 = 255;
+    let r1 = 0;
+    let r2 = 0;
+    let r3 = 0;
 
     for (
       let propertyIndex = 0;

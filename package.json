@@ -1,46 +1,40 @@
 {
-	"name": "luma-splatting-for-babylonjs",
-	"private": false,
-	"version": "1.0.0-beta.0",
-	"description": "LumaAI Web Library for Babylon.js",
-	"author": "drumath2237",
-	"license": "Apache-2.0",
-	"repository": {
-		"url": "https://github.com/drumath2237/luma-splatting-for-babylonjs"
-	},
-	"homepage": "https://github.com/drumath2237/luma-splatting-for-babylonjs",
-	"keywords": [
-		"LumaAI",
-		"Gaussian Splatting",
-		"Babylon.js"
-	],
-	"type": "module",
-	"files": [
-		"dist/"
-	],
-	"main": "./dist/index.umd.cjs",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		"types": "./dist/index.d.ts",
-		"import": "./dist/index.js",
-		"require": "./dist/index.umd.cjs"
-	},
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"prepare": "pnpm build",
-		"check": "biome check",
-		"check:write": "biome check --write",
-		"check:ci": "biome ci"
-	},
-	"devDependencies": {
-		"@babylonjs/core": "^7.23.0",
-		"@biomejs/biome": "^1.8.3",
-		"@types/node": "^22.5.2",
-		"sass": "^1.77.8",
-		"typescript": "^5.5.4",
-		"vite": "^5.4.3",
-		"vite-plugin-dts": "^4.1.0"
-	}
+  "name": "luma-splatting-for-babylonjs",
+  "private": false,
+  "version": "1.0.0-beta.0",
+  "description": "LumaAI Web Library for Babylon.js",
+  "author": "drumath2237",
+  "license": "Apache-2.0",
+  "repository": {
+    "url": "https://github.com/drumath2237/luma-splatting-for-babylonjs"
+  },
+  "homepage": "https://github.com/drumath2237/luma-splatting-for-babylonjs",
+  "keywords": ["LumaAI", "Gaussian Splatting", "Babylon.js"],
+  "type": "module",
+  "files": ["dist/"],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "prepare": "pnpm build",
+    "check": "biome check",
+    "check:write": "biome check --write",
+    "check:ci": "biome ci"
+  },
+  "devDependencies": {
+    "@babylonjs/core": "^7.23.0",
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^22.5.2",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3",
+    "vite-plugin-dts": "^4.1.0"
+  }
 }

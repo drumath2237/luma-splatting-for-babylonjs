@@ -6,6 +6,6 @@
   },
   "files": {
     "ignore": ["node_modules/", "dist/"],
-    "include": ["lib/*.ts", "src/*.ts"]
+    "include": ["lib/*.ts", "src/*.ts", "package.json", "vite.config.ts"]
   }
 }
